@@ -1,0 +1,190 @@
+body { 
+  color: #6b6b6b; 
+  font-family: 'Raleway', sans-serif;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+}
+
+.page-logo {
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.page-logo img {
+  height: 50px;
+  width: 50px;
+  display: block;
+  border-radius: 50%;
+  }
+
+a { text-decoration: none; }
+
+.nav-bar{ padding: 10px;} 
+
+.nav-bar a { 
+  padding: 10px;
+  color: #6b6b6b; 
+}
+
+.about-us {
+  padding: 10px;
+  margin: 25px auto;
+
+}
+
+.about-us h3, .team-header h3 {
+  font-weight: 1;
+  font-size: 70px;
+  text-align: center;
+  margin: 40px auto 0 auto;
+}
+
+.about-us p, .team-header p { 
+  max-width: 750px; 
+  margin: 0 auto; 
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 15px;
+  padding: 10px;
+
+}
+
+.gallery img { height: 200px; width: 380px;}
+
+.gallery  p, .gallery h3 { 
+  text-align:left;
+  padding: 5px;
+}
+
+.gallery-item p { max-width: 350px; }
+
+.team-gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  height: 20px;
+  width:  20px;
+  
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  height: 20px;
+  width:  20px;
+}
+
+.footer-container{ background-color: #282828 }
+
+.footer-social {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;   
+}
+
+.footer-info{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 15px;
+  padding: 50px;
+  text-align: center;
+  margin: 50px auto;
+}
+
+hr { opacity: 50%;}
+
+.footer-info h3 { color: white; }
+
+.footer-CR { text-align: center; }
+
+@media (max-width: 768px) {
+  
+  .gallery {text-align: center;}
+  
+  .gallery img { height: 200px; width: 300px;}
+  
+  .arrow { display: none; }  
+  
+  .team-gallery {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin: auto; 
+  }
+  
+  .gallery  p, .gallery h3 { 
+  width: 400px; 
+  text-align:center;
+  padding: 5px;
+  margin: auto;
+}
+  
+/*  I had to specify column start because I was getting empty spaces in the start and end of my grid (occupied by navigational arrows). Although arrows display is set to none, they were still taking up a cell. */
+  
+  .team-member1, .team-member3 {
+    grid-column-start: 1;
+    justify-self: center;
+    align-self: center;
+  }
+  
+  .team-member2, .team-member4 { 
+    justify-self: center;
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  
+    
+  .page-logo { 
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    }
+  
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    }
+  
+  .nav-bar { margin: auto; }
+
+   .arrow { display: none; } 
+  
+  .team-gallery {
+    display:flex;
+    flex-direction: column;
+    }
+  
+  .footer-social { flex-wrap: wrap;}
+  
+}
